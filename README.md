@@ -1,6 +1,54 @@
-# vue-page-component
+# vue-page-component 
 
 > A pagination component for vue
+
+<img width="300" src="./shots/page.png" />
+
+Code Example
+
+``` html
+<vue-page-component 
+	 :maxpage='pagination.maxpage'
+	 :page='pagination.page'
+	 :size='true'
+	 :callback='pageCallback'>
+</vue-page-component>
+```
+
+``` js
+import VueCoreImageUpload  from 'vue-core-image-upload';
+
+new Vue({
+  el:'#app'
+  data:{
+		return{
+			pagination:{
+				page:2,
+				maxpage:20,
+				size:false,
+			}
+		}
+	},
+	components:{
+		'vue-page-component':vuePageComponent,
+	},
+	methods:{
+		pageCallback(page){
+			this.pagination.page=page;
+		}
+	}	
+});
+```
+
+### Options
+
+| Props        | Type         | Example  | Description  |
+| ------------- |:----------| ---------|--------------|
+| page     | Number | 10 | current page |
+| maxpage      | Number      |  121 | max page |
+| size | Boolean     |   true | if true,view small and big otherwise |
+| callback | Function   |    pageCallback | the first argument is your jump or click page|
+
 
 ## Build Setup
 
@@ -18,4 +66,3 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
