@@ -16,7 +16,7 @@ Code Example
 ```
 
 ``` js
-import VueCoreImageUpload  from 'vue-core-image-upload';
+import vuePageComponent from './page.vue';
 new Vue({
   el:'#app'
   data:{
