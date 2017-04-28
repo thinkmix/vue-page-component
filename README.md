@@ -10,7 +10,7 @@ Code Example
 <vue-page-component 
 	 :maxpage='pagination.maxpage'
 	 :page='pagination.page'
-	 :size='true'
+	 :size='pagination.size'
 	 :callback='pageCallback'>
 </vue-page-component>
 ```
