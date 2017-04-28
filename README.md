@@ -2,7 +2,7 @@
 
 > A pagination component for vue
 
-<img width="300" src="./shots/page.png" />
+<img width="500" src="./shots/page.png" />
 
 Code Example
 
@@ -17,26 +17,25 @@ Code Example
 
 ``` js
 import VueCoreImageUpload  from 'vue-core-image-upload';
-
 new Vue({
   el:'#app'
   data:{
-		return{
-			pagination:{
-				page:2,
-				maxpage:20,
-				size:false,
-			}
-		}
-	},
-	components:{
-		'vue-page-component':vuePageComponent,
-	},
-	methods:{
-		pageCallback(page){
-			this.pagination.page=page;
-		}
-	}	
+    return{
+      pagination:{
+        page:2,
+        maxpage:20,
+        size:false,
+      }
+    }
+  },
+  components:{
+    'vue-page-component':vuePageComponent,
+  },
+  methods:{
+    pageCallback(page){
+      this.pagination.page=page;
+    }
+  }	
 });
 ```
 
